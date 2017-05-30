@@ -1,0 +1,29 @@
+{
+  "name": "aw-grid",
+  "version": "0.1.0",
+  "description": "AWeber FlexBox Grid",
+  "main": "aw-grid.css",
+  "scripts": {
+    "autoprefix": "postcss dist/aw-grid.css --use autoprefixer -r --no-map",
+    "beautify": "perfectionist dist/aw-grid.min.css dist/aw-grid.css",
+    "build": "yarn lint && yarn compile",
+    "compile": "node-sass src/main.scss dist/aw-grid.css",
+    "dist": "yarn build && yarn process",
+    "lint": "stylelint src/**/*.scss --syntax scss",
+    "minify": "cssnano dist/aw-grid.css dist/aw-grid.min.css",
+    "mqpack": "mqpacker -s dist/aw-grid.css dist/aw-grid.css",
+    "process": "yarn mqpack && yarn autoprefix && yarn minify && yarn beautify"
+  },
+  "repository": "https://github.aweber.io/frontend/aw-grid",
+  "author": "David Gomez",
+  "license": "SEE LICENSE IN LICENSE",
+  "devDependencies": {
+    "css-mqpacker": "^6.0.0",
+    "cssnano-cli": "^1.0.5",
+    "node-sass": "^4.5.3",
+    "perfectionist": "^2.4.0",
+    "postcss-cli": "^4.0.0",
+    "stylelint": "^7.10.1",
+    "stylelint-config-aweber": "http://npm.svc.prd.csh:5984/stylelint-config-aweber/-/stylelint-config-aweber-0.5.3.tgz"
+  }
+}
