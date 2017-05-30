@@ -1,0 +1,7 @@
+@function get-width($columns, $count, $unit) {
+  @return ((100 / $columns) * $count) * $unit;
+}
+
+@function is-percent-unit($value) {
+  @return if($value == 0, 1, 1%);
+}

@@ -1,0 +1,38 @@
+$column-count: 12 !default;
+$column-selector: '.aw-col' !default;
+$offset-modifier: 'offset' !default;
+
+$block-delimiter: '-' !default;
+$element-delimiter: '-' !default;
+$modifier-delimiter: '-' !default;
+
+$gutter-width: 1rem !default;
+$outer-margin: 2rem !default;
+$gutter-compensation: (($gutter-width / 2) * -1) !default;
+$half-gutter-width: ($gutter-width / 2) !default;
+
+$container-max-width: 1140px;
+
+// Breakpoints
+$xs: 'xs' !default;
+$sm: 'sm' !default;
+$md: 'md' !default;
+$lg: 'lg' !default;
+
+// Default breakpoint/viewport widths (ems)
+$viewport-xs: 30em !default;
+$viewport-sm: 48em !default;
+$viewport-md: 64em !default;
+$viewport-lg: 75em !default;
+
+$breakpoints: $xs, $sm, $md, $lg !default;
+$queries: (
+  $xs: $viewport-xs,
+  $sm: $viewport-sm,
+  $md: $viewport-md,
+  $lg: $viewport-lg
+) !default;
+$default-viewport: $viewport-xs !default;
+
+$column-properties: 'flex-basis', 'max-width' !default;
+$offset-properties: 'margin-left' !default;
