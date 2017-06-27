@@ -37,6 +37,28 @@
     &.aw-reverse {
       flex-direction: row-reverse;
     }
+
+    &--gutter {
+      &-none {
+        margin-left: 0;
+        margin-right: 0;
+
+        & > div[class^='#{$column-prefix}-'] {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+
+      &-double {
+        margin-left: $gutter-width * -1;
+        margin-right: $gutter-width * -1;
+
+        & > div[class^='#{$column-prefix}-'] {
+          padding-left: $gutter-width;
+          padding-right: $gutter-width;
+        }
+      }
+    }
   }
 }
 

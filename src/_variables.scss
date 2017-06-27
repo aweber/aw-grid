@@ -1,5 +1,6 @@
 $column-count: 12 !default;
-$column-selector: '.aw-col' !default;
+$column-prefix: 'aw-col' !default;
+$column-selector: '.#{$column-prefix}' !default;
 $offset-modifier: 'offset' !default;
 
 $block-delimiter: '-' !default;
