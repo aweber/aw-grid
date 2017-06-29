@@ -135,8 +135,8 @@
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
-    padding-left: .5rem;
-    padding-right: .5rem;
+    padding-left: -.5rem;
+    padding-right: -.5rem;
 }
 
 .aw-col-xs {
@@ -342,8 +342,8 @@
         -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
-        padding-left: .5rem;
-        padding-right: .5rem;
+        padding-left: -.5rem;
+        padding-right: -.5rem;
     }
 
     .aw-col-sm {
@@ -550,8 +550,8 @@
         -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
-        padding-left: .5rem;
-        padding-right: .5rem;
+        padding-left: -.5rem;
+        padding-right: -.5rem;
     }
 
     .aw-col-md {
@@ -758,8 +758,8 @@
         -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
-        padding-left: .5rem;
-        padding-right: .5rem;
+        padding-left: -.5rem;
+        padding-right: -.5rem;
     }
 
     .aw-col-lg {
