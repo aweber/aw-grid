@@ -6,9 +6,10 @@
   "scripts": {
     "autoprefix": "postcss dist/aw-grid.css --use autoprefixer -r --no-map",
     "beautify": "perfectionist dist/aw-grid.min.css dist/aw-grid.css",
-    "build": "yarn lint && yarn compile",
+    "build": "yarn lint && yarn compile && yarn docs",
     "compile": "node-sass src/main.scss dist/aw-grid.css",
     "dist": "yarn build && yarn process",
+    "docs": "sassdoc src/**/*.scss -d docs/",
     "lint": "stylelint src/**/*.scss --syntax scss",
     "minify": "cssnano dist/aw-grid.css dist/aw-grid.min.css",
     "mqpack": "mqpacker -s dist/aw-grid.css dist/aw-grid.css",
