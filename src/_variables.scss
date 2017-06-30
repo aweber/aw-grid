@@ -1,39 +1,71 @@
+/// Column count to set the ammount of grid columns by default
+/// @type Number
 $column-count: 12 !default;
+
+/// Column prefix to create the classnames for each grid column
+/// @type String
 $column-prefix: 'aw-col' !default;
 $column-selector: '.#{$column-prefix}' !default;
+
+/// Offset modifier prefix to create the classnames for each grid column offset
+/// @type String
 $offset-modifier: 'offset' !default;
 
+/// Classname delimeters
+/// @type String
 $block-delimiter: '-' !default;
 $element-delimiter: '-' !default;
 $modifier-delimiter: '-' !default;
 
+/// Gutter width to define the space between columns
+/// @type Length
 $gutter-width: 1rem !default;
-$outer-margin: 2rem !default;
-$gutter-compensation: (($gutter-width / 2) * -1) !default;
-$half-gutter-width: ($gutter-width / 2) !default;
 
+/// Outer margin to define the space outside the grid
+/// @type Length
+$outer-margin: 2rem !default;
+
+/// Gutter compensation and half with to define the space between columns
+/// @type Length
+$gutter-compensation: (($gutter-width * 0.5) * -1) !default;
+$half-gutter-width: (($gutter-width * 0.5) * -1) !default;
+
+/// Grid container max width
+/// @type Length
 $container-max-width: 1140px;
 
-// Breakpoints
+/// Media breakpoints
+/// @type String
 $xs: 'xs' !default;
 $sm: 'sm' !default;
 $md: 'md' !default;
 $lg: 'lg' !default;
 
-// Default breakpoint/viewport widths (ems)
+/// Default breakpoint/viewport widths in em values
+/// @type Length
 $viewport-xs: 30em !default;
 $viewport-sm: 48em !default;
 $viewport-md: 64em !default;
 $viewport-lg: 75em !default;
 
+/// Default media breakpoint list
+/// @type List
 $breakpoints: $xs, $sm, $md, $lg !default;
+
+/// Media queries map
+/// @type Map
 $queries: (
   $xs: $viewport-xs,
   $sm: $viewport-sm,
   $md: $viewport-md,
   $lg: $viewport-lg
 ) !default;
+
+/// Default viewport (mobile first)
+/// @type Length
 $default-viewport: $viewport-xs !default;
 
+/// Additional column and offset properties
+/// @type List
 $column-properties: 'flex-basis', 'max-width' !default;
 $offset-properties: 'margin-left' !default;

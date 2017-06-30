@@ -1,7 +1,26 @@
+/// Calculate the columns and offsets width based in the column count, the
+/// column position, and the desired unit
+///
+/// @access private
+///
+/// @param {Number} $columns - Column count
+/// @param {Number} $count - Column position
+/// @param {Length | Number} $unit - Value to use as unit conversion or column
+/// position
+///
+/// @return {Length} Column | Offset width
 @function get-width($columns, $count, $unit) {
   @return ((100 / $columns) * $count) * $unit;
 }
 
+/// Verifies if the value is a percentage or another kind of length in order
+/// to remove or return a percentage value to be used as a multiplier unit
+///
+/// @access private
+///
+/// @param {Length} $value - Length unit to be checked
+///
+/// @return {Number | Length}
 @function is-percent-unit($value) {
   @return if($value == 0, 1, 1%);
 }

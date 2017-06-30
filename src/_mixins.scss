@@ -1,13 +1,57 @@
-@mixin columns-width($property, $columns, $count) {
-  #{$property}: get-width($columns, $count, is-percent-unit($count));
+/// Set the columns width for the provided property based on the column count
+/// and the current column position
+///
+/// @access public
+///
+/// @param {String} $property - CSS property to apply the width
+/// @param {Number} $columns - Column count
+/// @param {Number} $position - Current column position
+///
+/// @example scss - Usage
+///   .foo {
+///     @include columns-width('max-width', 12, 4);
+///   }
+///
+/// @example css - CSS output
+///   .foo {
+///     max-width: 33.33333%;
+///   }
+@mixin columns-width($property, $columns, $position) {
+  #{$property}: get-width($columns, $position, is-percent-unit($position));
 }
 
-@mixin offsets-width($property, $columns, $count) {
-  #{$property}: get-width($columns, 1, is-percent-unit($count)) * $count;
+/// Set the offset width for the provided property based on the column count
+/// and the current column position
+///
+/// @access public
+///
+/// @param {String} $property - CSS property to apply the width
+/// @param {Number} $columns - Column count
+/// @param {Number} $position - Current column position
+///
+/// @example scss - Usage
+///   .foo {
+///     @include offsets-width('margin-left', 12, 4);
+///   }
+///
+/// @example css - CSS output
+///   .foo {
+///     margin-left: 33.33333%;
+///   }
+@mixin offsets-width($property, $columns, $position) {
+  #{$property}: get-width($columns, 1, is-percent-unit($position)) * $position;
 }
 
-@mixin queries($width, $queries) {
-  $query: map-get($queries, $width);
+/// Generates the CSS code for each media query specified in the $queries
+/// variable. This mixin use the $default-viewport variable to decide which
+/// breakpoint must be outside of the @media rule.
+///
+/// @access private
+///
+/// @param {String} $breakpoint - Name of the media query breakpoint
+/// @param {Map} $queries - List of media query breakpoints
+@mixin queries($breakpoint, $queries) {
+  $query: map-get($queries, $breakpoint);
 
   @if ($query == $default-viewport) {
     @content;
@@ -18,6 +62,18 @@
   }
 }
 
+/// Generates the columns CSS code for the grid using the queries mixin to
+/// create the media queries and the project variables
+///
+/// @access private
+///
+/// @param {String} $block [$block-delimiter]
+/// @param {List} $bps [$breakpoints]
+/// @param {Number} $columns [$column-count]
+/// @param {String} $modifier [$modifier-delimiter]
+/// @param {List} $properties [$column-properties]
+/// @param {String} $selector [$column-selector]
+/// @param {Map} $queries [$queries]
 @mixin columns(
   $block: $block-delimiter,
   $bps: $breakpoints,
@@ -52,19 +108,32 @@
   }
 }
 
+/// Generates the offsets CSS code for the grid using the queries mixin to
+/// create the media queries and the project variables
+///
+/// @access private
+///
+/// @param {String} $block [$block-delimiter]
+/// @param {List} $bps [$breakpoints]
+/// @param {Number} $columns [$column-count]
+/// @param {String} $modifier [$modifier-delimiter]
+/// @param {String} $offset [$offset-modifier]
+/// @param {List} $properties [$column-properties]
+/// @param {String} $selector [$column-selector]
+/// @param {Map} $queries [$queries]
 @mixin offsets(
   $block: $block-delimiter,
   $bps: $breakpoints,
-  $col: $column-selector,
   $columns: $column-count,
   $modifier: $modifier-delimiter,
   $offset: $offset-modifier,
   $properties: $offset-properties,
+  $selector: $column-selector,
   $queries: $queries
 ) {
   @each $bp in $bps {
     @for $i from 0 through $columns - 1 {
-      #{$col}#{$block}#{$bp}#{$modifier}#{$offset}#{$modifier}#{$i} {
+      #{$selector}#{$block}#{$bp}#{$modifier}#{$offset}#{$modifier}#{$i} {
         @include queries($bp, $queries) {
           @content;
 
@@ -77,29 +146,41 @@
   }
 }
 
+/// Basic CSS declarations for every breakpoint available in the queries map
+/// including both columns and offsets
+///
+/// @access private
+///
+/// @param {String} $block [$block-delimiter]
+/// @param {List} $bps [$breakpoints]
+/// @param {Number} $columns [$column-count]
+/// @param {String} $element [$element-delimiter]
+/// @param {String} $modifier [$modifier-delimiter]
+/// @param {String} $offset [$offset-modifier]
+/// @param {String} $selector [$column-selector]
 @mixin defaults(
   $block: $block-delimiter,
   $bps: $breakpoints,
-  $col: $column-selector,
   $columns: $column-count,
   $element: $element-delimiter,
   $modifier: $modifier-delimiter,
-  $offset: $offset-modifier
+  $offset: $offset-modifier,
+  $selector: $column-selector
 ) {
   @each $bp in $bps {
     @include queries($bp, $queries) {
       @for $i from 0 through 12 {
         @if $i == 0 {
-          #{$col}#{$block}#{$bp} {
+          #{$selector}#{$block}#{$bp} {
             @content;
           }
         } @else if $i == 12 {
-          #{$col}#{$block}#{$bp}#{$element}#{$i} {
+          #{$selector}#{$block}#{$bp}#{$element}#{$i} {
             @content;
           }
         } @else if $i != 0 {
-          #{$col}#{$block}#{$bp}#{$element}#{$i},
-          #{$col}#{$block}#{$bp}#{$modifier}#{$offset}#{$modifier}#{$i} {
+          #{$selector}#{$block}#{$bp}#{$element}#{$i},
+          #{$selector}#{$block}#{$bp}#{$modifier}#{$offset}#{$modifier}#{$i} {
             @content;
           }
         }
@@ -108,6 +189,27 @@
   }
 }
 
+/// Generates the CSS code for the grid helpers including the code in the media
+/// queries using the projetc breakpoints
+///
+/// @access public
+///
+/// @param {String} $selector - Helper classname selector
+/// @param {List} $bps [$breakpoints]
+/// @param {String} $modifier [$modifier-delimiter]
+///
+/// @example scss - Usage
+///   @include helper('foo');
+///
+/// @example css - CSS output
+///   .foo-xs {
+///     property: value;
+///   }
+///   @media screen and (min-width: 48em) {
+///     .foo-sm {
+///       property: value;
+///     }
+///   }
 @mixin helper(
   $selector,
   $bps: $breakpoints,
