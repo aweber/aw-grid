@@ -1,4 +1,4 @@
-/// Calculates the columns/offsets width based on the column count, the
+/// Calculates the width of columns/offsets based on the column count, the
 /// column position, and the desired unit
 ///
 /// @access private
@@ -12,7 +12,7 @@
   @return ((100 / $columns) * $position) * $unit;
 }
 
-/// Gets the multiplier unit based on a value.
+/// Gets the multiplier unit based on a value
 /// Returns 1 for a zero value, otherwise returns 1%
 ///
 /// @access private
