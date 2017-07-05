@@ -17,7 +17,7 @@
 ///     max-width: 33.33333%;
 ///   }
 @mixin columns-width($property, $columns, $position) {
-  #{$property}: get-width($columns, $position, is-percent-unit($position));
+  #{$property}: get-width($columns, $position, get-multiplier-unit($position));
 }
 
 /// Set the offset width for the provided property based on the column count
@@ -39,7 +39,7 @@
 ///     margin-left: 33.33333%;
 ///   }
 @mixin offsets-width($property, $columns, $position) {
-  #{$property}: get-width($columns, 1, is-percent-unit($position)) * $position;
+  #{$property}: get-width($columns, 1, get-multiplier-unit($position)) * $position;
 }
 
 /// Generates the CSS code for each media query specified in the $queries

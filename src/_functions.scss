@@ -12,14 +12,14 @@
   @return ((100 / $columns) * $position) * $unit;
 }
 
-/// Verifies if the value is a percentage or another kind of length in order
-/// to remove or return a percentage value to be used as a multiplier unit
+/// Gets the multiplier unit based on a value.
+/// Returns 1 for a zero value, otherwise returns 1%
 ///
 /// @access private
 ///
-/// @param {Length} $value - Length unit to be checked
+/// @param {Length} $value - Value to be checked
 ///
 /// @return {Number | Length}
-@function is-percent-unit($value) {
+@function get-multiplier-unit($value) {
   @return if($value == 0, 1, 1%);
 }
