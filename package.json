@@ -17,7 +17,7 @@
   },
   "repository": "https://github.aweber.io/frontend/aw-grid",
   "author": "David Gomez",
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "MIT",
   "devDependencies": {
     "css-mqpacker": "^6.0.0",
     "cssnano-cli": "^1.0.5",
