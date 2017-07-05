@@ -108,8 +108,8 @@
 @include defaults() {
   box-sizing: border-box;
   flex: 0 0 auto;
-  padding-left: $gutter-width * -0.5;
-  padding-right: $gutter-width * -0.5;
+  padding-left: $gutter-width * 0.5;
+  padding-right: $gutter-width * 0.5;
 }
 
 @include columns();
