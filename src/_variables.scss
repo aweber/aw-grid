@@ -1,27 +1,27 @@
-/// Column count to set the ammount of grid columns by default
+/// Default number of grid columns
 /// @type Number
 $column-count: 12 !default;
 
-/// Column prefix to create the classnames for each grid column
+/// Default classname prefix for a grid column
 /// @type String
 $column-prefix: 'aw-col' !default;
 $column-selector: '.#{$column-prefix}' !default;
 
-/// Offset modifier prefix to create the classnames for each grid column offset
+/// Default classname prefix for a grid column offset
 /// @type String
 $offset-modifier: 'offset' !default;
 
-/// Classname delimeters
+/// Default classname delimeters
 /// @type String
 $block-delimiter: '-' !default;
 $element-delimiter: '-' !default;
 $modifier-delimiter: '-' !default;
 
-/// Gutter width to define the space between columns
+/// Default space between columns
 /// @type Length
 $gutter-width: 1rem !default;
 
-/// Outer margin to define the space outside the grid
+/// Default grid outer margin
 /// @type Length
 $outer-margin: 2rem !default;
 
