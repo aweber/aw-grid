@@ -1,6 +1,6 @@
 {
   "name": "aw-grid",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "AWeber FlexBox Grid",
   "main": "aw-grid.css",
   "scripts": {
@@ -17,7 +17,7 @@
   },
   "repository": "https://github.aweber.io/frontend/aw-grid",
   "author": "David Gomez",
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "MIT",
   "devDependencies": {
     "css-mqpacker": "^6.0.0",
     "cssnano-cli": "^1.0.5",
@@ -26,6 +26,6 @@
     "postcss-cli": "^4.0.0",
     "sassdoc": "^2.3.0",
     "stylelint": "^7.10.1",
-    "stylelint-config-aweber": "http://npm.svc.prd.csh:5984/stylelint-config-aweber/-/stylelint-config-aweber-0.5.3.tgz"
+    "stylelint-order": "^0.5.0"
   }
 }

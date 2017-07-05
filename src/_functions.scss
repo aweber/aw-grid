@@ -1,26 +1,25 @@
-/// Calculate the columns and offsets width based in the column count, the
+/// Calculates the width of columns/offsets based on the column count, the
 /// column position, and the desired unit
 ///
 /// @access private
 ///
 /// @param {Number} $columns - Column count
-/// @param {Number} $count - Column position
-/// @param {Length | Number} $unit - Value to use as unit conversion or column
-/// position
+/// @param {Number} $position - Column position
+/// @param {Number | Percent} $unit - Multiplier unit
 ///
 /// @return {Length} Column | Offset width
-@function get-width($columns, $count, $unit) {
-  @return ((100 / $columns) * $count) * $unit;
+@function get-width($columns, $position, $unit) {
+  @return ((100 / $columns) * $position) * $unit;
 }
 
-/// Verifies if the value is a percentage or another kind of length in order
-/// to remove or return a percentage value to be used as a multiplier unit
+/// Gets the multiplier unit based on a value
+/// Returns 1 for a zero value, otherwise returns 1%
 ///
 /// @access private
 ///
-/// @param {Length} $value - Length unit to be checked
+/// @param {Length} $value - Value to be checked
 ///
 /// @return {Number | Length}
-@function is-percent-unit($value) {
+@function get-multiplier-unit($value) {
   @return if($value == 0, 1, 1%);
 }
