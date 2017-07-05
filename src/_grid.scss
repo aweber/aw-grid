@@ -11,8 +11,8 @@
   display: flex;
   flex: 0 1 auto;
   flex-direction: row;
-  margin-left: $gutter-compensation;
-  margin-right: $gutter-compensation;
+  margin-left: $gutter-width * -0.5;
+  margin-right: $gutter-width * -0.5;
 }
 
 .aw {
@@ -108,8 +108,8 @@
 @include defaults() {
   box-sizing: border-box;
   flex: 0 0 auto;
-  padding-left: $half-gutter-width;
-  padding-right: $half-gutter-width;
+  padding-left: $gutter-width * 0.5;
+  padding-right: $gutter-width * 0.5;
 }
 
 @include columns();

@@ -17,10 +17,11 @@
 ///     max-width: 33.33333%;
 ///   }
 @mixin columns-width($property, $columns, $position) {
-  #{$property}: get-width($columns, $position, is-percent-unit($position));
+  $unit: get-multiplier-unit($position);
+  #{$property}: get-width($columns, $position, $unit);
 }
 
-/// Set the offset width for the provided property based on the column count
+/// Set the offsets width for the provided property based on the column count
 /// and the current column position
 ///
 /// @access public
@@ -39,11 +40,12 @@
 ///     margin-left: 33.33333%;
 ///   }
 @mixin offsets-width($property, $columns, $position) {
-  #{$property}: get-width($columns, 1, is-percent-unit($position)) * $position;
+  $unit: get-multiplier-unit($position);
+  #{$property}: get-width($columns, 1, $unit) * $position;
 }
 
-/// Generates the CSS code for each media query specified in the $queries
-/// variable. This mixin use the $default-viewport variable to decide which
+/// Generate the CSS code for each media query specified in the $queries
+/// variable. This mixin uses the $default-viewport variable to decide which
 /// breakpoint must be outside of the @media rule.
 ///
 /// @access private
@@ -62,7 +64,7 @@
   }
 }
 
-/// Generates the columns CSS code for the grid using the queries mixin to
+/// Generate the columns CSS code for the grid using the queries mixin to
 /// create the media queries and the project variables
 ///
 /// @access private
@@ -108,7 +110,7 @@
   }
 }
 
-/// Generates the offsets CSS code for the grid using the queries mixin to
+/// Generate the offsets CSS code for the grid using the queries mixin to
 /// create the media queries and the project variables
 ///
 /// @access private
@@ -146,8 +148,8 @@
   }
 }
 
-/// Basic CSS declarations for every breakpoint available in the queries map
-/// including both columns and offsets
+/// Generate default CSS declarations for every breakpoint available
+/// in the queries map including both columns and offsets
 ///
 /// @access private
 ///
@@ -189,8 +191,8 @@
   }
 }
 
-/// Generates the CSS code for the grid helpers including the code in the media
-/// queries using the projetc breakpoints
+/// Generate the CSS code for the grid helpers including the code in the media
+/// queries using the project breakpoints
 ///
 /// @access public
 ///
