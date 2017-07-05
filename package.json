@@ -26,6 +26,6 @@
     "postcss-cli": "^4.0.0",
     "sassdoc": "^2.3.0",
     "stylelint": "^7.10.1",
-    "stylelint-config-aweber": "http://npm.svc.prd.csh:5984/stylelint-config-aweber/-/stylelint-config-aweber-0.5.3.tgz"
+    "stylelint-order": "^0.5.0"
   }
 }
