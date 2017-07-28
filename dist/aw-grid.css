@@ -2,8 +2,8 @@
     box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 .aw-row, .aw-row--nowrap {
@@ -269,6 +269,11 @@
 }
 
 @media screen and (min-width:48em) {
+    .aw-container, .aw-container-fluid {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
     .aw-start-sm {
         -webkit-box-pack: start;
         -ms-flex-pack: start;
