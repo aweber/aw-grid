@@ -2,8 +2,8 @@
     box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .aw-row, .aw-row--nowrap {
@@ -270,8 +270,8 @@
 
 @media screen and (min-width:48em) {
     .aw-container, .aw-container-fluid {
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
 
     .aw-start-sm {
@@ -482,6 +482,11 @@
 }
 
 @media screen and (min-width:64em) {
+    .aw-container, .aw-container-fluid {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
     .aw-start-md {
         -webkit-box-pack: start;
         -ms-flex-pack: start;
