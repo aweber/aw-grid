@@ -28,7 +28,7 @@
         "mixin",
         "return",
         "warn",
-        "while",
+        "while"
       ]
     } ],
     "at-rule-no-vendor-prefix": true,
@@ -127,8 +127,8 @@
     "selector-list-comma-space-after": "always-single-line",
     "selector-list-comma-space-before": "never",
     "selector-max-empty-lines": 0,
-    "selector-no-id": true,
-    "selector-no-universal": true,
+    "selector-max-id": 0,
+    "selector-max-universal": 0,
     "selector-no-vendor-prefix": true,
     "selector-pseudo-class-case": "lower",
     "selector-pseudo-class-no-unknown": true,
