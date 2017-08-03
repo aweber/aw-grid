@@ -2,8 +2,8 @@
     box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .aw-row, .aw-row--nowrap {
@@ -346,6 +346,11 @@
         padding-right: .5rem;
     }
 
+    .aw-container, .aw-container-fluid {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
     .aw-col-sm {
         -ms-flex-preferred-size: 0;
         flex-basis: 0;
@@ -552,6 +557,11 @@
             flex: 0 0 auto;
         padding-left: .5rem;
         padding-right: .5rem;
+    }
+
+    .aw-container, .aw-container-fluid {
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 
     .aw-col-md {
@@ -762,6 +772,11 @@
         padding-right: .5rem;
     }
 
+    .aw-container, .aw-container-fluid {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
     .aw-col-lg {
         -ms-flex-preferred-size: 0;
         flex-basis: 0;
@@ -968,6 +983,11 @@
             flex: 0 0 auto;
         padding-left: .5rem;
         padding-right: .5rem;
+    }
+
+    .aw-container, .aw-container-fluid {
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 
     .aw-col-xl {
