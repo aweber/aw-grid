@@ -1,3 +1,49 @@
+/// Multiplies the value of the left and right padding by the given value
+///
+/// @access private
+///
+/// @param {Number} $multiplier - Times value
+@mixin padding-multi($multiplier) {
+  padding-left: $outer-margin * $multiplier;
+  padding-right: $outer-margin * $multiplier;
+}
+
+/// Modifies the right and left padding values for the aw-container and
+/// aw-container-fluid classes for especific breakpoints
+///
+/// @access private
+///
+/// @param {String} $query - Viewport size
+@mixin fix-container($query) {
+  @media screen and (min-width: $query) {
+    .aw {
+      &-container,
+      &-container-fluid {
+        @if ($query == $viewport-sm) {
+          @include padding-multi(1.5);
+        } @else {
+          @include padding-multi(2);
+        }
+      }
+    }
+  }
+}
+
+/// Generate the containers CSS code for the grid using the fix-container mixin
+/// to create the media queries apply the padding modifications
+///
+/// @access private
+///
+/// @param {List} $bps [$breakpoints]
+@mixin containers($bps: $breakpoints) {
+  @each $bp in $bps {
+    $query: map-get($queries, $bp);
+    @if ($query != $default-viewport) {
+      @include fix-container($query);
+    }
+  }
+}
+
 /// Set the columns width for the provided property based on the column count
 /// and the current column position
 ///

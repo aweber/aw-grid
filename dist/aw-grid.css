@@ -2,8 +2,8 @@
     box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .aw-row, .aw-row--nowrap {
@@ -268,7 +268,7 @@
     margin-left: 91.66667%;
 }
 
-@media screen and (min-width:48em) {
+@media screen and (min-width:30em) {
     .aw-start-sm {
         -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -344,6 +344,11 @@
             flex: 0 0 auto;
         padding-left: .5rem;
         padding-right: .5rem;
+    }
+
+    .aw-container, .aw-container-fluid {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
 
     .aw-col-sm {
@@ -476,7 +481,7 @@
     }
 }
 
-@media screen and (min-width:64em) {
+@media screen and (min-width:48em) {
     .aw-start-md {
         -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -552,6 +557,11 @@
             flex: 0 0 auto;
         padding-left: .5rem;
         padding-right: .5rem;
+    }
+
+    .aw-container, .aw-container-fluid {
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 
     .aw-col-md {
@@ -684,7 +694,7 @@
     }
 }
 
-@media screen and (min-width:75em) {
+@media screen and (min-width:64em) {
     .aw-start-lg {
         -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -760,6 +770,11 @@
             flex: 0 0 auto;
         padding-left: .5rem;
         padding-right: .5rem;
+    }
+
+    .aw-container, .aw-container-fluid {
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 
     .aw-col-lg {
@@ -888,6 +903,219 @@
     }
 
     .aw-col-lg-offset-11 {
+        margin-left: 91.66667%;
+    }
+}
+
+@media screen and (min-width:75em) {
+    .aw-start-xl {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .aw-center-xl {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .aw-end-xl {
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        text-align: right;
+    }
+
+    .aw-top-xl {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+
+    .aw-middle-xl {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .aw-bottom-xl {
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+    }
+
+    .aw-around-xl {
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+
+    .aw-between-xl {
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+    .aw-first-xl {
+        -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+        order: -1;
+    }
+
+    .aw-last-xl {
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1;
+    }
+
+    .aw-col-xl, .aw-col-xl-1, .aw-col-xl-2, .aw-col-xl-3, .aw-col-xl-4,
+    .aw-col-xl-5, .aw-col-xl-6, .aw-col-xl-7, .aw-col-xl-8, .aw-col-xl-9,
+    .aw-col-xl-10, .aw-col-xl-11, .aw-col-xl-12, .aw-col-xl-offset-1,
+    .aw-col-xl-offset-2, .aw-col-xl-offset-3, .aw-col-xl-offset-4,
+    .aw-col-xl-offset-5, .aw-col-xl-offset-6, .aw-col-xl-offset-7,
+    .aw-col-xl-offset-8, .aw-col-xl-offset-9, .aw-col-xl-offset-10,
+    .aw-col-xl-offset-11 {
+        box-sizing: border-box;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+
+    .aw-container, .aw-container-fluid {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .aw-col-xl {
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        max-width: 100%;
+    }
+
+    .aw-col-xl-1 {
+        -ms-flex-preferred-size: 8.33333%;
+        flex-basis: 8.33333%;
+        max-width: 8.33333%;
+    }
+
+    .aw-col-xl-2 {
+        -ms-flex-preferred-size: 16.66667%;
+        flex-basis: 16.66667%;
+        max-width: 16.66667%;
+    }
+
+    .aw-col-xl-3 {
+        -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+        max-width: 25%;
+    }
+
+    .aw-col-xl-4 {
+        -ms-flex-preferred-size: 33.33333%;
+        flex-basis: 33.33333%;
+        max-width: 33.33333%;
+    }
+
+    .aw-col-xl-5 {
+        -ms-flex-preferred-size: 41.66667%;
+        flex-basis: 41.66667%;
+        max-width: 41.66667%;
+    }
+
+    .aw-col-xl-6 {
+        -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+
+    .aw-col-xl-7 {
+        -ms-flex-preferred-size: 58.33333%;
+        flex-basis: 58.33333%;
+        max-width: 58.33333%;
+    }
+
+    .aw-col-xl-8 {
+        -ms-flex-preferred-size: 66.66667%;
+        flex-basis: 66.66667%;
+        max-width: 66.66667%;
+    }
+
+    .aw-col-xl-9 {
+        -ms-flex-preferred-size: 75%;
+        flex-basis: 75%;
+        max-width: 75%;
+    }
+
+    .aw-col-xl-10 {
+        -ms-flex-preferred-size: 83.33333%;
+        flex-basis: 83.33333%;
+        max-width: 83.33333%;
+    }
+
+    .aw-col-xl-11 {
+        -ms-flex-preferred-size: 91.66667%;
+        flex-basis: 91.66667%;
+        max-width: 91.66667%;
+    }
+
+    .aw-col-xl-12 {
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    .aw-col-xl-offset-0 {
+        margin-left: 0;
+    }
+
+    .aw-col-xl-offset-1 {
+        margin-left: 8.33333%;
+    }
+
+    .aw-col-xl-offset-2 {
+        margin-left: 16.66667%;
+    }
+
+    .aw-col-xl-offset-3 {
+        margin-left: 25%;
+    }
+
+    .aw-col-xl-offset-4 {
+        margin-left: 33.33333%;
+    }
+
+    .aw-col-xl-offset-5 {
+        margin-left: 41.66667%;
+    }
+
+    .aw-col-xl-offset-6 {
+        margin-left: 50%;
+    }
+
+    .aw-col-xl-offset-7 {
+        margin-left: 58.33333%;
+    }
+
+    .aw-col-xl-offset-8 {
+        margin-left: 66.66667%;
+    }
+
+    .aw-col-xl-offset-9 {
+        margin-left: 75%;
+    }
+
+    .aw-col-xl-offset-10 {
+        margin-left: 83.33333%;
+    }
+
+    .aw-col-xl-offset-11 {
         margin-left: 91.66667%;
     }
 }

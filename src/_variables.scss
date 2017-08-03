@@ -23,7 +23,7 @@ $gutter-width: 1rem !default;
 
 /// Default grid outer margin
 /// @type Length
-$outer-margin: 2rem !default;
+$outer-margin: 1rem !default;
 
 /// Grid container max width
 /// @type Length
@@ -35,17 +35,19 @@ $xs: 'xs' !default;
 $sm: 'sm' !default;
 $md: 'md' !default;
 $lg: 'lg' !default;
+$xl: 'xl' !default;
 
 /// Default breakpoint/viewport widths in em values
 /// @type Length
-$viewport-xs: 30em !default;
-$viewport-sm: 48em !default;
-$viewport-md: 64em !default;
-$viewport-lg: 75em !default;
+$viewport-xs: 0 !default;
+$viewport-sm: 30em !default;
+$viewport-md: 48em !default;
+$viewport-lg: 64em !default;
+$viewport-xl: 75em !default;
 
 /// Default media breakpoint list
 /// @type List
-$breakpoints: $xs, $sm, $md, $lg !default;
+$breakpoints: $xs, $sm, $md, $lg, $xl !default;
 
 /// Media queries map
 /// @type Map
@@ -53,7 +55,8 @@ $queries: (
   $xs: $viewport-xs,
   $sm: $viewport-sm,
   $md: $viewport-md,
-  $lg: $viewport-lg
+  $lg: $viewport-lg,
+  $xl: $viewport-xl
 ) !default;
 
 /// Default viewport (mobile first)
