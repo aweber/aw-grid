@@ -48,7 +48,7 @@
     margin-right: 0;
 }
 
-.aw-row--gutter-none>div[class^=aw-col-] {
+.aw-row--gutter-none>div[class*=aw-col-] {
     padding-left: 0;
     padding-right: 0;
 }
@@ -58,7 +58,7 @@
     margin-right: -1rem;
 }
 
-.aw-row--gutter-double>div[class^=aw-col-] {
+.aw-row--gutter-double>div[class*=aw-col-] {
     padding-left: 1rem;
     padding-right: 1rem;
 }
