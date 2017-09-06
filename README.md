@@ -3,10 +3,14 @@ AWeber FlexBox Grid is a responsive modern grid system for creating structured l
 
 ## Installation
 ### npm
-TBD…
+```bash
+npm install aw-grid --save-dev
+```
 
 ### Bower
-TBD…
+```bash
+bower install aw-grid
+```
 
 ### Production CSS | CDN
 TBD…
@@ -20,25 +24,25 @@ TBD…
 * Open a PR comparing your branch with the `develop` branch as the base.
 
 ### Install dependencies
-Install [Yarn](https://yarnpkg.com/) package manager before working on the project.
+_[npm 5^](http://blog.npmjs.org/post/161081169345/v500) is preferred_.
 ```bash
-yarn
+npm install
 ```
 
 ### Build documentation
 Use [SASSDoc](http://sassdoc.com/) to build the project’s documentation. _Not required to open a PR_.
 ```bash
-yarn docs
+npm run docs
 ```
 
 ### Lint code changes
 Lint your changes before opening a PR. If you don't, the Continuous Integration (CI) service won't allow your PR to be merged.
 ```bash
-yarn lint
+npm run lint
 ```
 
 ### Build distribution files
 Check the production output files, if needed.
 ```bash
-yarn dist
+npm run dist
 ```
