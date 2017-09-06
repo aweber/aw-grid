@@ -1,23 +1,37 @@
 {
   "name": "aw-grid",
   "version": "0.2.0",
-  "description": "AWeber FlexBox Grid",
-  "main": "aw-grid.css",
+  "description": "AWeber FlexBox Grid based off of CSS3 flexbox specification",
+  "style": "dist/aw-grid.css",
+  "main": "dist/aw-grid.css",
   "scripts": {
     "autoprefix": "postcss dist/aw-grid.css --use autoprefixer -r --no-map",
     "beautify": "perfectionist dist/aw-grid.min.css dist/aw-grid.css",
-    "build": "yarn lint && yarn compile && yarn docs",
+    "build": "npm run lint && npm run compile && npm run docs",
     "compile": "node-sass src/main.scss dist/aw-grid.css",
-    "dist": "yarn build && yarn process",
+    "dist": "npm run build && npm run process",
     "docs": "sassdoc src/**/*.scss -d docs/",
     "lint": "stylelint src/**/*.scss --syntax scss",
     "minify": "cssnano dist/aw-grid.css dist/aw-grid.min.css",
     "mqpack": "mqpacker -s dist/aw-grid.css dist/aw-grid.css",
-    "process": "yarn mqpack && yarn autoprefix && yarn minify && yarn beautify"
+    "process": "npm run mqpack && npm run autoprefix && npm run minify && npm run beautify"
   },
-  "repository": "https://github.aweber.io/frontend/aw-grid",
-  "author": "David Gomez",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:aweber/aw-grid.git"
+  },
+  "keywords": [
+    "browser",
+    "flexbox",
+    "grid",
+    "css"
+  ],
+  "author": "AWeber Communications",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aweber/aw-grid/issues"
+  },
+  "homepage": "https://github.com/aweber/aw-grid",
   "devDependencies": {
     "css-mqpacker": "^6.0.1",
     "cssnano-cli": "^1.0.5",

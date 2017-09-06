@@ -1,0 +1,22 @@
+{
+  "name": "aw-grid",
+  "version": "0.2.0",
+  "license": "MIT",
+  "homepage": "https://github.com/aweber/aw-grid",
+  "author": "@AWeber",
+  "description": "AWeber FlexBox Grid based off of CSS3 flexbox specification",
+  "main": "dist/aw-grid.css",
+  "keywords": [
+    "browser",
+    "flexbox",
+    "grid",
+    "css"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
