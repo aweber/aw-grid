@@ -1,14 +1,16 @@
 {
   "name": "aw-grid",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "AWeber FlexBox Grid based off of CSS3 flexbox specification",
   "style": "dist/aw-grid.css",
+  "sass": "dist/_aw-grid.scss",
   "main": "dist/aw-grid.css",
   "scripts": {
     "autoprefix": "postcss dist/aw-grid.css --use autoprefixer -r --no-map",
     "beautify": "perfectionist dist/aw-grid.min.css dist/aw-grid.css",
-    "build": "npm run lint && npm run compile && npm run docs",
+    "build": "npm run lint && npm run compile && npm run copy && npm run docs",
     "compile": "node-sass src/main.scss dist/aw-grid.css",
+    "copy": "ncp dist/aw-grid.css dist/_aw-grid.scss",
     "dist": "npm run build && npm run process",
     "docs": "sassdoc src/**/*.scss -d docs/",
     "lint": "stylelint src/**/*.scss --syntax scss",
@@ -35,6 +37,7 @@
   "devDependencies": {
     "css-mqpacker": "^6.0.1",
     "cssnano-cli": "^1.0.5",
+    "ncp": "^2.0.0",
     "node-sass": "^4.5.3",
     "perfectionist": "^2.4.0",
     "postcss-cli": "^4.1.0",
