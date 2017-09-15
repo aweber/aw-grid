@@ -1,3 +1,6 @@
+# v1.1.2
+* Remove SASS partial from distribution files
+
 # v1.1.1
 * Fix Bower version mismatch
 
