@@ -25,6 +25,10 @@
     }
   }
 
+  &-reverse {
+    flex-direction: column-reverse;
+  }
+
   &-row {
     @extend %row;
     flex-wrap: wrap;
