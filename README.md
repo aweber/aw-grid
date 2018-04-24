@@ -4,7 +4,7 @@ AWeber FlexBox Grid is a responsive modern grid system for creating structured l
 ## Installation
 ### npm
 ```bash
-npm install aw-grid --save-dev
+npm install @aweber/aw-grid --save-dev
 ```
 
 ### Bower
