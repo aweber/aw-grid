@@ -1,3 +1,6 @@
+# v1.2.0
+* Add npm support
+
 # v1.1.2
 * Remove SASS partial from distribution files
 
